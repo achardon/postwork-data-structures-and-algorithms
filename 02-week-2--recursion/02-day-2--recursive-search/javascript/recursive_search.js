@@ -1,5 +1,15 @@
 function recursiveSearch(arr, target) {
-  // type your code here
+  if (arr.length === 0) {
+    console.log(false)
+    return false
+  }
+  if (arr[arr.length - 1] === target) {
+    console.log(true)
+    return true
+  }
+  arr.pop()
+  return recursiveSearch(arr, target)
+  
 }
 
 if (require.main === module) {
